@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main(void){
+	FILE *pont_arq;
+	char palavra[20];
+	
+	pont_arq = fopen("dados.txt","r");
+	
+	if(pont_arq == NULL){
+		printf("Erro na abertura do arquivo!");
+		return 1;
+	}
+	else
+		{
+			
+			printf("Escreva uma palavra para gravar no arquivo: ");
+			scanf("%s", palavra);
+	
+			fprintf(pont_arq, "%s", palavra);
+	
+			fclose(pont_arq);
+	
+			printf("Dados gravados com sucesso! Pressione uma tecla para finalizar...");
+	}
+	
+	getch();
+	return(0);
+}
