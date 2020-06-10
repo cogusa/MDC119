@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+	FILE *pont_arq;
+	pont_arq = fopen("aluno.txt", "w");
+	int i=0;
+	char nome[30];
+	char matricula[10];
+
+
+	
+	printf("matricula: ");
+		memset(matricula, 0, sizeof(matricula));
+		scanf("%s",matricula);
+	for(i=0;i<10;i++){
+		fputc(matricula[i], pont_arq);
+	}
+	while(strcmp("0", matricula)){
+		printf("nome ");
+		memset(nome, 0, sizeof(nome));
+		scanf("%s", nome);
+		for(i=0;i<30;i++){
+			fputc(nome[i], pont_arq);
+		}
+	
+	memset(matricula, 0, sizeof(matricula));
+	printf("matricula ");
+	scanf("%s",matricula);
+	
+	for(i=0;i<10;i++){
+		fputc(matricula[i], pont_arq);
+	}
+}
+
+return 0;
+}
