@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(){
+	const int MAX = 256;
+	char s [MAX];
+	char matricula[30];
+	char nome[10];
+	FILE * arq;
+	int result;
+	file = fopen("alunos.txt","w");
+	
+		if(arq == NULL){
+		printf("Erro na abertura do arquivo!");
+		return 1;
+	}
+
+	fprintf(arq,"Nome: %10s\t%30s\n", nome);
+	fprintf(arq,"Matricula: %10s\t%30s\n", matricula);
+	fclose(arq);
+	
+	return 0;
+	
+}
